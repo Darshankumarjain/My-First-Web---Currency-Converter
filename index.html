@@ -5,108 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Currency Converter</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Orbitron', sans-serif;
-  }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+    }
 
-  body {
-    background-color: #0a0a0a;
-    color: #0ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-  }
-
-  .container {
-    background-color: #111;
-    padding: 30px;
-    border-radius: 16px;
-    width: 100%;
-    max-width: 500px;
-    border: 2px solid #00e5ff;
-    box-shadow: 0 0 15px #00f7ff66;
-    position: relative;
-  }
-
-  .logo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
-  }
-
-  .logo img {
-    max-width: 160px;
-    filter: drop-shadow(0 0 10px #00f7ff);
-  }
-
-  .form-group {
-    margin-bottom: 20px;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 8px;
-    color: #00f7ff;
-    font-weight: bold;
-    text-shadow: 0 0 4px #00f7ff88;
-  }
-
-  input,
-  select {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    border: 2px solid #00f7ff99;
-    background-color: #0c0c0c;
-    color: #00ffff;
-    font-size: 16px;
-    transition: 0.3s ease;
-    box-shadow: inset 0 0 6px #00f7ff22;
-  }
-
-  input:focus,
-  select:focus {
-    outline: none;
-    border-color: #00f7ff;
-    box-shadow: 0 0 8px #00f7ffcc;
-  }
-
-  .result {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #00f7ff;
-    text-shadow: 0 0 8px #00f7ff99;
-    min-height: 24px;
-  }
-
-  .footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    color: #777;
-  }
-
-  @media (max-width: 480px) {
-    .container {
+    body {
+      background-color: #0a0a0a;
+      color: #0ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
       padding: 20px;
-      border-radius: 12px;
+    }
+
+    .container {
+      background-color: #111;
+      padding: 30px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 500px;
+      border: 2px solid #00e5ff;
+      box-shadow: 0 0 15px #00f7ff66;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
     }
 
     .logo img {
-      max-width: 120px;
+      max-width: 160px;
+      filter: drop-shadow(0 0 10px #00f7ff);
     }
-  }
-</style>
 
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #00f7ff;
+      font-weight: bold;
+      text-shadow: 0 0 4px #00f7ff88;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 2px solid #00f7ff99;
+      background-color: #0c0c0c;
+      color: #00ffff;
+      font-size: 16px;
+      transition: 0.3s ease;
+      box-shadow: inset 0 0 6px #00f7ff22;
+    }
+
+    input:focus,
+    select:focus {
+      outline: none;
+      border-color: #00f7ff;
+      box-shadow: 0 0 8px #00f7ffcc;
+    }
+
+    button {
+      background-color: #00f7ff;
+      color: #000;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00f7ff88;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #00e0e0;
+    }
+
+    .result {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #00f7ff;
+      text-shadow: 0 0 8px #00f7ff99;
+      min-height: 24px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+        border-radius: 12px;
+      }
+
+      .logo img {
+        max-width: 120px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -125,8 +140,8 @@
         <option value="USD">USD - US Dollar</option>
         <option value="EUR">EUR - Euro</option>
         <option value="INR">INR - Indian Rupee</option>
-        <option value="JPY">JPY - Yen</option>
-        <option value="GBP">GBP - Pound</option>
+        <option value="JPY">JPY - Japanese Yen</option>
+        <option value="GBP">GBP - British Pound</option>
       </select>
     </div>
 
@@ -136,16 +151,55 @@
         <option value="USD">USD - US Dollar</option>
         <option value="EUR">EUR - Euro</option>
         <option value="INR">INR - Indian Rupee</option>
-        <option value="JPY">JPY - Yen</option>
-        <option value="GBP">GBP - Pound</option>
+        <option value="JPY">JPY - Japanese Yen</option>
+        <option value="GBP">GBP - British Pound</option>
       </select>
     </div>
 
-    <div class="result">Converted amount will appear here</div>
+    <div class="form-group">
+      <button id="convertBtn">Convert</button>
+    </div>
+
+    <div class="result" id="result">Converted amount will appear here</div>
 
     <div class="footer">
       &copy; Printingnest | Contact: 1212121515
     </div>
   </div>
+
+<script>
+  // Hardcoded exchange rates (base: 1 USD)
+  const rates = {
+    USD: 1,
+    EUR: 0.91,
+    INR: 83.3,
+    JPY: 157.4,
+    GBP: 0.78
+  };
+
+  document.getElementById('convertBtn').addEventListener('click', () => {
+    const amount = parseFloat(document.getElementById('amount').value);
+    const from = document.getElementById('from').value;
+    const to = document.getElementById('to').value;
+    const resultDiv = document.getElementById('result');
+
+    if (isNaN(amount) || amount <= 0) {
+      resultDiv.textContent = 'Please enter a valid amount.';
+      return;
+    }
+
+    if (!rates[from] || !rates[to]) {
+      resultDiv.textContent = 'Unsupported currency selected.';
+      return;
+    }
+
+    // Convert to USD first, then to target currency
+    const amountInUSD = amount / rates[from];
+    const convertedAmount = amountInUSD * rates[to];
+
+    resultDiv.textContent = `${amount} ${from} = ${convertedAmount.toFixed(2)} ${to}`;
+  });
+</script>
+
 </body>
 </html>
